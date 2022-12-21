@@ -1,7 +1,8 @@
 import private
 
-SEARCH_TERMS = ["BTC", "ETH", "$MMAT" , "$META" , "" ]
+STREAM_FILTER_RULES = ["Meta Materials", "$MMAT"]
 CSV_NAME = "tweets.csv"
-TABLE_NAME = "financial_assets"
-CONNECTION_STRING = private.CONNECTION_STRING
+TABLE_NAME = "tweet_data"
+# CONNECTION_STRING = private.CONNECTION_STRING
+CONNECTION_STRING = "postgresql://user:postpass@localhost:5432/postgres"
 
