@@ -25,7 +25,7 @@ TWITTER_APP_SECRET = "Ndfsjdlkfj3ipfjc0208uf32j000"
 # twitter bearer token
 BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAAKsdhasdqwo3u0u0EFJeeJJF#@Fhfhqi3fhoqh3ofCAHFEhc3qihcqihiohaiohcaoihoih2oqhcqo"
 # Db connection string
-CONNECTION_STRING = 'postgresql://seanrogan:masterpass@scraperstorage.cf2k04dkofim.us-east-1.rds.amazonaws.com:5432/scrapeddata'
+CONNECTION_STRING = 'postgresql://name:pass@scraperstorage.blahblah23912.us-east-1.rds.amazonaws.com:5432/data'
 ```
 # Twitter API Credentials
 To use the scraper youll need to sign up for a twitter developer account here https://developer.twitter.com , to get an API key and secret, an Application token and token secret, and a bearer token. These all go into the private.py file. the api key and secret belong in the TWITTER_API_* variables, the application token and secret belong in the TWITTER_APP_* variables.
