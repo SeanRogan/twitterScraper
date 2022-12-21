@@ -1,10 +1,11 @@
-tweepy
+tweepy~=4.12.1
 ipython
 matplotlib
 scipy
 numpy
 pandas
-dataset
+dataset~=1.5.2
 psycopg2
-textblob
-footer
+textblob~=0.15.3
+sqlalchemy~=1.4.45
+datafreeze~=0.1.0
