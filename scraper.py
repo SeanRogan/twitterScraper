@@ -1,12 +1,9 @@
-import logging
-import time
+import dataset
+import tweepy
+from sqlalchemy.exc import ProgrammingError
+
 import private
 import settings
-import tweepy
-import dataset
-from textblob import TextBlob
-from sqlalchemy.exc import ProgrammingError
-import json
 
 # Using TwitterAPI v2
 
