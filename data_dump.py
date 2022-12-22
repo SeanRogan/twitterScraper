@@ -14,8 +14,8 @@ from sys import argv
 try:
     db = dataset.connect(argv[1])                   # connect to the database with the connection string passed via the first argument
     result = db[argv[2]].all()                      # pull all info from the table passed by the second argument
-    freeze(result, format='csv',
-           filename=argv[3])                        # freeze saves the info from the table into a CSV file, the name of the file                                         # is passed as the third argument
+    freeze(result, format='csv',                    # freeze saves the info from the table into a CSV file, the name of the file
+           filename=argv[3])                        # is passed as the third argument
 except ProgrammingError as err:
     print("an error occured with the database" + err)
 
