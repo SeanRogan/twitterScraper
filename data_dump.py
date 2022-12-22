@@ -17,5 +17,5 @@ try:
     freeze(result, format='csv',                    # freeze saves the info from the table into a CSV file, the name of the file
            filename=argv[3])                        # is passed as the third argument
 except ProgrammingError as err:
-    print("an error occured with the database" + err)
+    print("an error occurred with the database" + err)
 
