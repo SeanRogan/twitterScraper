@@ -1,6 +1,5 @@
 from datafreeze import freeze
 import dataset
-import settings
 from sqlalchemy.exc import ProgrammingError
 from sys import argv
 
