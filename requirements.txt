@@ -2,6 +2,7 @@ tweepy~=4.12.1
 ipython
 matplotlib
 scipy
+boto3
 numpy
 pandas
 dataset~=1.5.2
