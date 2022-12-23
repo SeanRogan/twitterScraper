@@ -11,7 +11,7 @@ mkdir twitter_scraper_directory
 navigate to the new directory you just created and clone the repo into it with 
 ```
 cd twitter_scraper_directory
-git clone https://github.com/SeanRogan/TwitterScraper
+git clone https://github.com/SeanRogan/twitterScraper
 ```
 create a private.py file with ```touch private.py``` to store sensitive information. then use the ```pip install requirements.txt``` command to install required packages
 
