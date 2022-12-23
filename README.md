@@ -1,7 +1,10 @@
 # TwitterScraper
-a Twitter post scraping bot that collects posts and dumps them to a database for later data analysis
+a Twitter post scraping service that collects posts and dumps them to a database for later data analysis
 
-to use first create a directory to clone the repository into
+## Pre-Requisites
+The service is built with python 3.10, and uses a PostgreSQL database of the latest stable version. It also requires several python packages as dependencies, they will be installed upon using the run_script.sh or you can install manually following the instructions below.
+
+to use the service, first create a directory to clone the repository into
 ```
 mkdir twitter_scraper_directory
 ```
@@ -32,7 +35,8 @@ To use the scraper youll need to sign up for a twitter developer account here ht
 
 # Data Storage
 The scraper is made to work with a postgresql database. If you have a database simply add your connection string in the private.py file. the database connection string format for postgresql is as follows:  
-## postgresql://username:password@hostname:port/dbname 
+### postgresql://username:password@hostname:port/dbname 
+
 
 
 
