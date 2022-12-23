@@ -1,4 +1,4 @@
-# TwitterScraper
+# Twitter Scraper
 a Twitter post scraping service that collects posts and dumps them to a database for later data analysis. 
 
 ## Pre-Requisites
