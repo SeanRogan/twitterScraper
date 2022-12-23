@@ -1,10 +1,10 @@
 # TwitterScraper
-a Twitter post scraping service that collects posts and dumps them to a database for later data analysis
+a Twitter post scraping service that collects posts and dumps them to a database for later data analysis. 
 
 ## Pre-Requisites
 The service is built with python 3.10, and uses a PostgreSQL database of the latest stable version. It also requires several python packages as dependencies, they will be installed upon using the run_script.sh or you can install manually following the instructions below.
 
-to use the service, first create a directory to clone the repository into
+to install and use the service, first create a directory to clone the repository into
 ```
 mkdir twitter_scraper_directory
 ```
@@ -37,6 +37,7 @@ To use the scraper youll need to sign up for a twitter developer account here ht
 The scraper is made to work with a postgresql database. If you have a database simply add your connection string in the private.py file. the database connection string format for postgresql is as follows:  
 ### postgresql://username:password@hostname:port/dbname 
 
-
-
-
+# How to set up for your first scrape
+  
+Once you have your scripts all in the same directory and a database is running and ready to connect to your machine, all you have to do is edit the settings.py file to add or change the search terms you want to use. Up to 5 search "rules" are allowed with the basic free usage plan twitter offers. Rules can be simple search terms, or special strings that perform filter based on hashtags, presence of media or images, or other criteria, with examples like ```"cat has:media -grumpy"``` or ```"#nowplaying (happy OR exciting OR excited OR favorite OR fav OR amazing OR lovely OR incredible) (place_country:US OR place_country:MX OR place_country:CA) -horrible -worst -sucks -bad -disappointing```See the twitter api documentation on creating rules to filter the stream of tweets here https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/integrate/build-a-rule. Rules should be entered into the settings.py STREAM_FILTER_RULES list as a string. Once your settings and private files are filled in with your information, just run the start script to start the scraper, which will save the table as a csv file every night at midnight. You can adjust the time and frequency that happens by changing the chron job settings in start_script.sh. you can also just run the script standalone with ```python scraper.py```
+#Happy Scraping 🎅🏻
