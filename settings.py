@@ -1,6 +1,6 @@
 import private
 
-STREAM_FILTER_RULES = ["Meta Materials", "$MMAT"]
+STREAM_FILTER_RULES = ["cats"]
 CSV_NAME = "tweets.csv"
 TABLE_NAME = "tweet_data"
 CONNECTION_STRING = private.CONNECTION_STRING
