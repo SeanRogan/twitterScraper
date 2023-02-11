@@ -11,3 +11,4 @@ textblob
 sqlalchemy
 datafreeze
 pytz
+vaderSentiment

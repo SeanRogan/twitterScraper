@@ -5,10 +5,9 @@ import dataset
 import pytz
 import tweepy
 from sqlalchemy.exc import ProgrammingError
-
+import sentiment_score
 import private
 import settings
-
 # Using TwitterAPI v2
 
 # connect to the database to store tweets
@@ -24,7 +23,15 @@ auth = tweepy.OAuth1UserHandler(private.TWITTER_API_KEY, private.TWITTER_API_SEC
 api = tweepy.API(auth)
 
 
+def clean_tweet(tweet):
+    # TODO need to clean tweet of emojis and special characters and links here
+
+    pass
+
+
 class TweetStream(tweepy.StreamingClient):  # the tweetstream class inherits from the tweepy StreamingClient class
+
+
 
     def on_connect(self):  # on_connect is called upon stream connection
         print("Connected to twitter stream..standing by to receive data..")
@@ -34,6 +41,8 @@ class TweetStream(tweepy.StreamingClient):  # the tweetstream class inherits fro
         if tweet.text[slice(3)] == "RT ":    # ignore re-tweets
             pass
         else:
+            cleaned_tweet = clean_tweet(tweet) # clean the tweet of unwanted links/emojis/text
+            sentiment_score.sentiment_scores(cleaned_tweet) #analyze sentiment and assign score with vader model
             tweet_text = tweet.text     # save the text of the tweet
             tweet_id = str(tweet.id)    # save the tweet id
             entry = dict(
@@ -42,7 +51,7 @@ class TweetStream(tweepy.StreamingClient):  # the tweetstream class inherits fro
                 consumed=False,          # add a consumed=false field to signal the service that will process the info later
                 created_on=datetime.datetime.now(tz=pytz.timezone('America/New_York'))
             )
-            print(entry)
+            print("attempting to insert entry: " + entry)
             table = db[settings.TABLE_NAME]
             try:
                 # insert the tweet into the database as a dictionary object with all the tweet information
@@ -57,6 +66,8 @@ class TweetStream(tweepy.StreamingClient):  # the tweetstream class inherits fro
 
     def on_errors(self, err):
         print("an error occurred with the tweet stream " + err)
+
+
 
 
 # Create the stream object
