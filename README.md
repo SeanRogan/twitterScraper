@@ -14,7 +14,7 @@ navigate to the new directory you just created and clone the repo into it with
 cd twitter_scraper_directory
 git clone https://github.com/SeanRogan/twitterScraper
 ```
-create a private.py file with ```touch private.py``` to store sensitive information. then use the ```pip install requirements.txt``` command to install required packages
+create a private.py file with ```touch private.py``` to store sensitive information. then use the ```pip install requirements.txt``` command to install required packages. Then you can open private.py in the text editor of your choice, and add your information as instructed below.
 
 # Sensitive Information
 this scraper requires several sensitive pieces of information to be use in the code. API keys and secrets, and a database connection string with the username and password visible. To keep things separate, the application calls these strings from a private.py file. the file should look like this:
