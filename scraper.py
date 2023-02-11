@@ -67,7 +67,7 @@ if current_rules is not None:           # if there are current rules in place...
     for rule in current_rules:          # iterate through them...
         stream.delete_rules(rule.id)    # and delete them
 
-# add new rules to filter result
+# add new rules from the configuration file (settings.py) to filter result
 for stream_rule in settings.STREAM_FILTER_RULES:
     stream.add_rules(tweepy.StreamRule(stream_rule))
 

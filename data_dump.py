@@ -8,7 +8,7 @@ from sys import argv
 # its meant to be run on a chron job by a shell script on whatever server is running the data scraper.
 # a command to run this script would look like the line below
 
-# python data_dump.py -postgresql://seanrogan:password@scraperstorage.cf2k04dkofim.us-east-1.rds.amazonaws.com:5432/scrappeddata -financial_assets -stock-related-tweets.csv
+# python data_dump.py postgresql://seanrogan:password@scraperstorage.cf2k04dkofim.us-east-1.rds.amazonaws.com:5432/scrappeddata financial_assets stock-related-tweets.csv
 
 
 try:
